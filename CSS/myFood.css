@@ -406,8 +406,13 @@ h1{
   color: #343a40;
   font-weight: bold;
   padding: 2px;
+  transition: 0.5s;
 }
 
+.second-btn:hover{
+  background-color: #ffbf00;
+  box-shadow: 2px 2px 30px #212529;
+}
 .gallery{
   /* margin-top: 150px; */
   display: grid;
