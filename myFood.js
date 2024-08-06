@@ -22,14 +22,37 @@ let toGalleryBtn=document.querySelector(".to-gallery-btn")
 const showForm=function(e){
     e.preventDefault()
 
-    if(form.style.display==="none"){
-    form.style.display="block"
-    behindForm.style.display="block"
-    }
-    else{
-            form.style.display="none"
+    form.classList.toggle("hide")
+    form.classList.toggle("unhide")
+
+    if(getComputedStyle(behindForm).display!=="none")
         behindForm.style.display="none"
-    }
+        else
+        behindForm.style.display="block"
+
+    // behindForm.classList.toggle="unhide";
+    // behindForm.classList.toggle="hide";
+    // form.classList.toggle("hide")
+    // form.classList.toggle("unhide")
+    // behindForm.classList.add("unhide")
+    // behindForm.style.display="block"
+    // formShowBtn.removeEventListener("click",showForm)
+    // formShowBtn.addEventListener("click",hideForm)
+   
+}
+const hideForm=function(e){
+    e.preventDefault()
+
+    form.classList.toggle("hide")
+    form.classList.toggle("unhide")
+    behindForm.classList.remove("unhide")
+    behindForm.classList.add("hide")
+
+    behindForm.style.display="none"
+    formShowBtn.removeEventListener("click",hideForm)
+    behindForm.addEventListener("click",showForm)
+
+   
 }
 
 formShowBtn.addEventListener("click",function(e){
@@ -37,7 +60,6 @@ formShowBtn.addEventListener("click",function(e){
 })
 
 behindForm.addEventListener("click",function(e){
-    console.log(e)
     if(form.style.display!=="none"){
         showForm(e)
     }  

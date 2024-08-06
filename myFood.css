@@ -31,6 +31,8 @@ nav a:visited,nav a:link,nav a:active{
 nav a:hover{
   text-decoration: underline;
 }
+
+
 .subscribe{
   border-radius: 15px;
   background-color: #e67e22;
@@ -693,8 +695,21 @@ footer{
   background-color: rgba(0, 0, 0, 0.3);
   z-index: 5;
 }
+
+.hide{
+  opacity: 0;
+  pointer-events:none;
+  transition: 0.5s;
+}
+
+.unhide{
+  opacity: 1;
+  pointer-events: auto;
+  transition: 0.5s;
+}
+
 .form{
-  display: none;
+  /* display: none; */
 }
 form{
   margin: 150px 100px;
