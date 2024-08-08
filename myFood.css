@@ -708,8 +708,19 @@ footer{
   transition: 0.5s;
 }
 
-.form{
-  /* display: none; */
+
+/* 
+.unfaded{
+  opacity: 1;
+  transition: 0.5;
+} */
+.link{
+  opacity: 1;
+}
+.fade{
+  color: #868e96;
+  opacity: 0.5;
+  transition: 0.5s;
 }
 form{
   margin: 150px 100px;

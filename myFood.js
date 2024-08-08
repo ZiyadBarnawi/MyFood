@@ -19,6 +19,8 @@ let secPlanes=document.querySelector(".pricing-plans")
 let toPlanesBtn=document.querySelector(".to-planes-btn")
 let secGallery=document.querySelector(".gallery")
 let toGalleryBtn=document.querySelector(".to-gallery-btn")
+let nav=document.querySelector("nav")
+let links=document.querySelectorAll(".link")
 const showForm=function(e){
     e.preventDefault()
 
@@ -30,14 +32,7 @@ const showForm=function(e){
         else
         behindForm.style.display="block"
 
-    // behindForm.classList.toggle="unhide";
-    // behindForm.classList.toggle="hide";
-    // form.classList.toggle("hide")
-    // form.classList.toggle("unhide")
-    // behindForm.classList.add("unhide")
-    // behindForm.style.display="block"
-    // formShowBtn.removeEventListener("click",showForm)
-    // formShowBtn.addEventListener("click",hideForm)
+   
    
 }
 const hideForm=function(e){
@@ -103,4 +98,34 @@ toPlanesBtn.addEventListener("click",function(e){
 toGalleryBtn.addEventListener("click",function(e){
     e.preventDefault()
     secGallery.scrollIntoView({behavior:"smooth"})
+})
+
+nav.addEventListener("mouseover",function(e){
+    if(e.target.classList.contains("link")){
+        let link=e.target
+        
+        for(let l of links){
+            if (l===link)
+                continue
+            else
+            {
+                l.classList.add("fade")
+                l.classList.remove("unfaded")
+            }
+        }
+    }
+})
+
+nav.addEventListener("mouseout",function(e){
+    if(e.target.classList.contains("link")){
+        let link=e.target
+        link.classList.remove("active-link")
+        for (let l of links){
+            if (l.classList.contains("fade")){
+                l.classList.remove("fade")
+                l.classList.add("unfaded")
+
+            }
+        }
+    }
 })
