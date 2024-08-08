@@ -21,6 +21,7 @@ let secGallery=document.querySelector(".gallery")
 let toGalleryBtn=document.querySelector(".to-gallery-btn")
 let nav=document.querySelector("nav")
 let links=document.querySelectorAll(".link")
+let subscribe=document.querySelector(".subscribe")
 const showForm=function(e){
     e.preventDefault()
 
@@ -113,6 +114,9 @@ nav.addEventListener("mouseover",function(e){
                 l.classList.remove("unfaded")
             }
         }
+        if (!link.classList.contains("form-show-btn")){
+            subscribe.classList.add("fade")
+        }
     }
 })
 
@@ -124,6 +128,7 @@ nav.addEventListener("mouseout",function(e){
             if (l.classList.contains("fade")){
                 l.classList.remove("fade")
                 l.classList.add("unfaded")
+                subscribe.classList.remove("fade")
 
             }
         }
