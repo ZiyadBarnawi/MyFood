@@ -22,6 +22,21 @@ let toGalleryBtn=document.querySelector(".to-gallery-btn")
 let nav=document.querySelector("nav")
 let links=document.querySelectorAll(".link")
 let subscribe=document.querySelector(".subscribe")
+let productDescriptionCoords=secProductDescription.getBoundingClientRect()
+let header=document.querySelector("header")
+
+let observer=new IntersectionObserver(function(entries){
+    let [entry]=entries;
+    console.log(entry)
+    if (entry.intersectionRatio < 0.1) {
+        nav.classList.add("sticky");
+    } else {
+        nav.classList.remove("sticky");
+    }
+    
+},{root:null,threshold:0.1})
+observer.observe(nav)
+
 const showForm=function(e){
     e.preventDefault()
 
@@ -134,3 +149,12 @@ nav.addEventListener("mouseout",function(e){
         }
     }
 })
+
+// window.addEventListener("scroll",function(){
+    
+//     if(this.window.scrollY> productDescriptionCoords.top)
+//         nav.classList.add("sticky")
+//     else
+//     nav.classList.remove("sticky")
+
+// })
