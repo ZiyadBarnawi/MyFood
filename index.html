@@ -81,7 +81,7 @@
       </div>
     </header>
 
-    <section id="product-description" class="product-description">
+    <section id="product-description" class="product-description scroll-hide">
       <h2>Never cook again!</h2>
       <p>
         Our subscriptions cover 365 days per year, even including major
@@ -91,14 +91,15 @@
         on vacation? Just pause your subscription, and we refund unused days.
       </p>
     </section>
-
-    <p id="how" class="how-main-text">How MyFood Works:</p>
-    <section class="how-it-works">
+    
+    <p id="how" class="how-main-text scroll-hide">How MyFood Works:</p>
+    <section class="how-it-works scroll-hide">
       <div class="first-how">
         <img
-          class="first-how-img"
-          src="img/app/app-screen-1.png"
+          class="first-how-img app-img blured"
+          src="img/app/lazy-app-screen-1.png"
           alt="app-screen-1"
+          data-src="img\app\app-screen-1.png"
         />
         <div class="how-description-1">
           <h1 class="header-number">01</h1>
@@ -106,7 +107,7 @@
             Tell us what you like (and what not):
           </span>
           <p>
-            Never again waste time thinking about what to eat! Omnifood AI will
+            Never again waste time thinking about what to eat! MyFood AI will
             create a 100% personalized weekly meal plan just for you. It makes
             sure you get all the nutrients and vitamins you need, no matter what
             diet you follow!
@@ -119,21 +120,23 @@
           <p>
             <span class="how-header"> Approve your weekly meal plan: </span>
             <br />
-            Once per week, approve the meal plan generated for you by Omnifood
+            Once per week, approve the meal plan generated for you by MyFood
             AI. You can change ingredients, swap entire meals, or even add your
             own recipes.
           </p>
         </div>
         <img
-          class="second-how-img"
-          src="img/app/app-screen-2.png"
+          class="second-how-img app-img blured"
+          src="img/app/lazy-app-screen-2.png"
+          data-src="img/app/app-screen-2.png"
           alt="app-screen-2"
         />
       </div>
       <div class="third-how">
         <img
-          class="third-how-img"
-          src="img/app/app-screen-3.png"
+          class="third-how-img app-img blured"
+          src="img/app/lazy-app-screen-3.png"
+          data-src="img/app/app-screen-3.png"
           alt="app-screen-3"
         />
         <div class="how-description-3">
@@ -149,11 +152,11 @@
         </div>
       </div>
 
-      >
+      
     </section>
 
-    <h1 id="sample" class="sample-header">MyFood AI chooses from 5,000+ recipes</h1>
-    <section class="sample">
+    <h1 id="sample" class="sample-header scroll-hide">MyFood AI chooses from 5,000+ recipes</h1>
+    <section class="sample scroll-hide">
       <div>
         <img src="img/meals/meal-1.jpg" alt="meal-1" />
 
@@ -320,7 +323,7 @@
         </ul>
       </div>
     </section>
-    <div class="more-recipes">
+    <div class="more-recipes scroll-hide">
       <a href="#">See all recipes </a
       ><svg
         class="icon"
@@ -335,7 +338,7 @@
         ></path>
       </svg>
     </div>
-    <section class="diets">
+    <section class="diets scroll-hide">
       <h1 id="any-diet" class="any-diet-header">MyFood works with any diet</h1>
 
       <div>
@@ -357,8 +360,8 @@
       </div>
     </section>
 
-    <h1>Prices include all applicable taxes. Users can cancel at any time.</h1>
-    <section id="planes" class="pricing-plans">
+    <h1 class="scroll-hide">Prices include all applicable taxes. Users can cancel at any time.</h1>
+    <section id="planes" class="pricing-plans scroll-hide">
       <div class="price-card price-card-1">
         <span class="bundle-header-1"
           >Starter
@@ -484,8 +487,9 @@
       </div>
     </section>
 
-    <div id="gallery" class="gallery-and-reviews-div">
-      <div class="carousel card-1 active-card">
+    <div id="gallery" class="gallery-and-reviews-div scroll-hide">
+      <!-- not needed anymore -->
+      <!-- <div class="carousel card-1 active-card">
         <img class="carousel-img-1" src="img/customers/customer.jpg" alt="" />
         <span class="vertical-text">
           <blockquote class="customer-opinion">
@@ -579,7 +583,7 @@
         <img class="carousel-img-3" src="img/customers/steve.jpg" alt="" />
         <span class="vertical-text">
           <blockquote class="customer-opinion">
-            "Omnifood is a life saver! I just started a company, so there's no
+            "MyFood is a life saver! I just started a company, so there's no
             time for cooking. I couldn't live without my daily meals now! "
           </blockquote>
           <span class="name">-William Afton</span>
@@ -624,7 +628,7 @@
         <img class="carousel-img-4" src="img/customers/ben.jpg" alt="" />
         <span class="vertical-text">
           <blockquote class="customer-opinion">
-            "I got Omnifood for the whole family, and it frees up so much time!
+            "I got MyFood for the whole family, and it frees up so much time!
             Plus, everything is organic and vegan and without plastic. "
           </blockquote>
           <span class="name">-Leonardo Watch</span>
@@ -664,7 +668,77 @@
           <button class="dot-3">&nbsp;</button>
           <button class="dot-4 active-dot">&nbsp;</button>
         </div>
-      </div>
+      </div> -->
+
+      <div class="carousel">
+        <div class="carousel-card-1 card">
+          <img class="carousel-img-1" src="img/customers/customer.jpg" alt="" />
+          <span class="vertical-text">
+            <blockquote class="customer-opinion">
+              "Inexpensive, healthy and great-tasting meals, without even having
+              to order manually! It feels truly magical."
+            </blockquote>
+            <span class="name">-Michael Afton</span>
+            <span class="job">-technician</span>
+          </span>
+        </div>
+        <div class="carousel-card-2 card">
+          <img class="carousel-img-2" src="img/customers/dave.jpg" alt="" />
+        <span class="vertical-text">
+          <blockquote class="customer-opinion">
+            "The AI algorithm is crazy good, it chooses the right meals for me
+            every time. It's amazing not to worry about food anymore! "
+          </blockquote>
+          <span class="name">-Hero Hamada</span>
+          <span class="job">-athlete</span>
+        </span>
+        </div>
+        <div class="carousel-card-3 card">
+          <img class="carousel-img-3" src="img/customers/steve.jpg" alt="" />
+          <span class="vertical-text">
+            <blockquote class="customer-opinion">
+              "MyFood is a life saver! I just started a company, so there's no
+              time for cooking. I couldn't live without my daily meals now! "
+            </blockquote>
+            <span class="name">-William Afton</span>
+            <span class="job">-Photographer</span>
+          </span>
+        </div>
+        <button class="left-btn">
+          <svg
+            class="left-arrow"
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            fill="#000000"
+            viewBox="0 0 256 256"
+          >
+            <path
+              d="M165.66,202.34a8,8,0,0,1-11.32,11.32l-80-80a8,8,0,0,1,0-11.32l80-80a8,8,0,0,1,11.32,11.32L91.31,128Z"
+            ></path>
+          </svg>
+        </button>
+        <button class="right-btn">
+          <svg
+            class="right-arrow"
+            xmlns="http://www.w3.org/2000/svg"
+            width="32"
+            height="32"
+            fill="#000000"
+            viewBox="0 0 256 256"
+          >
+            <path
+              d="M181.66,133.66l-80,80a8,8,0,0,1-11.32-11.32L164.69,128,90.34,53.66a8,8,0,0,1,11.32-11.32l80,80A8,8,0,0,1,181.66,133.66Z"
+            ></path>
+          </svg>
+        </button>
+    </div>
+    <div class="dots">
+      <button class="dot-1 active-dot">&nbsp;</button>
+      <button class="dot-2">&nbsp;</button>
+      <button class="dot-3">&nbsp;</button>
+    </div>
+
 
       <section class="gallery">
         <img src="img/gallery/gallery-1.jpg" alt="gallery" />
@@ -682,7 +756,7 @@
       </section>
     </div>
 
-    <footer id="subscribe">
+    <footer class="scroll-hide">
       <p class="featured-in">Featured in:</p>
       <section class="logos">
         <img src="img/logos/business-insider.png" alt="a cmpanies logo" />
@@ -727,5 +801,5 @@
   
   </body>
 </html>
-<script src="carousel.js"></script>
+<!-- <script src="carousel.js"></script> -->
 <script src="myFood.js"></script>

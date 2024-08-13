@@ -57,7 +57,10 @@ nav a:hover{
 }
 
 header {
-  position: relative;
+  /* position: relative; */
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
   height: 100vh;
   color: #ced4da;
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), #495057),
@@ -65,8 +68,20 @@ header {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+/* header {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), #495057),
+    url("img/hero-3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
 img {
   width: 240px;
+  transition: 0.5s;
 }
 .img-1 {
   position: absolute;
@@ -170,9 +185,20 @@ h2 {
     margin-right: 100px;
 }
 
+section,.gallery-and-reviews-div,footer{
+  opacity: 1;
+  transform: translateY(10px);
+  transition: all 0.5s;
+}
 section div div p{
     width: 75%;
 }
+
+.blured{
+  filter: blur(20px);
+  transition: 0.5s;
+}
+
 .first-how {
     display: flex;
     align-items: center;
@@ -182,6 +208,7 @@ section div div p{
     align-self: center;
     margin-left: 200px;
     position: relative;
+    /* width: 360px; */
     
 }
 /* .first-how::after{
@@ -281,7 +308,7 @@ div h1{
 }
 
 .sample div:hover{
-  transform: scaleY(1.01);
+  transform: translateY(-10px);
 }
 .sample section{
   justify-items: start;
@@ -487,10 +514,10 @@ h1{
   align-items: center;
   gap: 20px;
 }
-
+/* NOt needed anymore */
 /* Coppied the carousel code from my earlier project */
 
-
+/* 
 .carousel-img-1,
 .carousel-img-2,
 .carousel-img-3,
@@ -671,10 +698,189 @@ h1{
         opacity: 1;
     }
     
-}
+} */
 
 /* end of carousel code */
 
+.carousel{
+  position: relative;
+  display: flex;
+  /* flex-direction: column; */
+  align-items: center;
+  margin: 100px 50px;
+  padding: 32px;
+  background-color: #ffa94d;
+  width: 50%;
+  gap: 50px;
+  line-height: 1.5;
+  border-radius: 15px;
+  height: 255px;
+  overflow: hidden;
+}
+
+/* .carousel-card-1{
+  transform: translateX(0);
+}
+.carousel-card-2{
+  transform: translateX(100%);
+}
+.carousel-card-3{
+  transform: translateX(200%);
+} */
+.card{
+  position: absolute;
+  background-color: #ffa94d ;
+  display: flex;
+}
+.right-btn {
+  border-radius: 100px;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 50%;
+  transform: translate(-20px, -50%);
+  right: -10px;
+  box-shadow: 5px 5px 10px black;
+}
+.left-btn {
+  border-radius: 100px;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 50%;
+  transform: translate(27px, -50%);
+  left: -25px;
+  box-shadow: 5px 5px 10px black;
+}
+.left-arrow {
+  fill: #e8590c;
+}
+.right-arrow {
+  fill: #e8590c;
+}
+.customer-opinion {
+  font-size: 22px;
+  color: #ffe8cc;
+  height: 100px;
+  margin-left: 50px;
+  padding: 48px;
+
+}
+.name {
+  padding-top: 100px;
+}
+.name,
+.job {
+  align-self: center;
+  color: #fff4e6;
+  font-size: 18px;
+}
+.vertical-text {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 0px;
+  justify-content: center;
+  justify-content: flex-start;
+}
+
+.carousel-img-1,
+.carousel-img-2,
+.carousel-img-3{
+  width: 150px;
+  height: 150px;
+  align-self: center;
+  border-radius: 15px;
+  transform: translateX(30%);
+}
+
+.dots {
+  position: absolute;
+  top: 80%;
+  right: 70%;
+  display: flex;
+}
+
+.dot-1 {
+  position: absolute;
+  border-radius: 100px;
+  background-color: #e8590c;
+  background-color: white;
+  border: 5px solid #e8590c;
+  width: 20px;
+  height: 20px;
+  left: -20px;
+  cursor: pointer;
+
+}
+.dot-2 {
+  border-radius: 100px;
+  background-color: #e8590c;
+  background-color: white;
+  border: 5px solid #e8590c;
+  width: 20px;
+  height: 20px;
+  left: -25px;
+  cursor: pointer;
+
+}
+.dot-3 {
+  border-radius: 100px;
+  background-color: #e8590c;
+  background-color: white;
+  border: 5px solid #e8590c;
+  width: 20px;
+  height: 20px;
+  left: 0;
+  cursor: pointer;
+
+}
+
+.next-animation {
+  animation-name: nextAnimation;
+  animation-duration: 2s;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+@keyframes nextAnimation {
+  from{
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  to{
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.previous-animation {
+  animation-name: previousAnimation;
+  animation-duration: 2s;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+}
+
+@keyframes previousAnimation {
+    from{
+      transform: translateX(-100px);
+      opacity: 0;
+    }
+    to{
+      transform: translateX(0);
+      opacity: 1;
+    }
+  
+} 
 footer{
   background-color: #343a40;
   border-top: 5px solid #343a40;
@@ -854,3 +1060,8 @@ color: #868e96;
   cursor:pointer
 }
 
+.scroll-hide{
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 500ms;
+}

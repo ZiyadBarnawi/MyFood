@@ -24,19 +24,58 @@ let links=document.querySelectorAll(".link")
 let subscribe=document.querySelector(".subscribe")
 let productDescriptionCoords=secProductDescription.getBoundingClientRect()
 let header=document.querySelector("header")
-
-let observer=new IntersectionObserver(function(entries){
-    let [entry]=entries;
-    console.log(entry)
-    if (entry.intersectionRatio < 0.1) {
+let allScrollHide=document.querySelectorAll(".scroll-hide")
+let appImgs=document.querySelectorAll(".app-img");
+let rightBtn=document.querySelector(".right-btn")
+let leftBtn=document.querySelector(".left-btn")
+let cards=document.querySelectorAll(".card")
+let currCard=0;
+let maxCardNum=cards.length
+//this one if for the header
+let observer = new IntersectionObserver(
+    function (entries) {
+      let [entry] = entries;
+      if (!entry.isIntersecting) {
         nav.classList.add("sticky");
-    } else {
+      } else {
         nav.classList.remove("sticky");
-    }
-    
-},{root:null,threshold:0.1})
-observer.observe(nav)
+      }
+    },
+    { root: null, threshold: 0.1 }
+  );
+  observer.observe(header);
 
+//this one if for the sections
+let scrollHiddenObserver=new IntersectionObserver(function(entries,observer){
+
+let [entry]=entries
+entry.target.classList.remove("scroll-hide")
+observer.unobserve(entry.target)
+},{root:null,threshold:0.15})
+
+let imgObserver=new IntersectionObserver(function(entries,observer){
+    let [entry]=entries
+    if(!entry.isIntersecting) 
+        return;
+    entry.target.src=entry.target.dataset.src
+
+    entry.target.addEventListener("load",function(){
+        entry.target.classList.remove("blured")
+
+    })
+
+    observer.unobserve(entry.target)
+},{root:null,threshold:0.1})
+
+
+for(let singleHide of allScrollHide){
+    scrollHiddenObserver.observe(singleHide)
+}
+
+for(let appImg of appImgs){
+
+    imgObserver.observe(appImg)
+}
 const showForm=function(e){
     e.preventDefault()
 
@@ -135,6 +174,13 @@ nav.addEventListener("mouseover",function(e){
     }
 })
 
+const goToCard=function(cardNum){
+    cards.forEach(function(card,i){
+        card.style.transform=`translateX(${(i-cardNum)*100}%)`
+    })
+
+}
+goToCard(0)
 nav.addEventListener("mouseout",function(e){
     if(e.target.classList.contains("link")){
         let link=e.target
@@ -149,12 +195,30 @@ nav.addEventListener("mouseout",function(e){
         }
     }
 })
+rightBtn.addEventListener("click",function(){
 
-// window.addEventListener("scroll",function(){
+    if(currCard>=maxCardNum-1)
+    {
+        currCard=0
+    }
+    else{
+    currCard++
+    }
+    cards[currCard].classList.toggle("next-animation")
+    setTimeout(function(){cards[currCard].classList.toggle("next-animation")},2000)
+    goToCard(currCard)
+})
+
+leftBtn.addEventListener("click",function(){
     
-//     if(this.window.scrollY> productDescriptionCoords.top)
-//         nav.classList.add("sticky")
-//     else
-//     nav.classList.remove("sticky")
-
-// })
+    if(currCard===0)
+    {
+        currCard=maxCardNum-1
+    }
+    else{
+        currCard--
+    }
+    cards[currCard].classList.toggle("previous-animation")
+    setTimeout(function(){cards[currCard].classList.toggle("previous-animation")},2000)
+    goToCard(currCard)
+})
