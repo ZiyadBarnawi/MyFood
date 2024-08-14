@@ -31,6 +31,8 @@ let leftBtn=document.querySelector(".left-btn")
 let cards=document.querySelectorAll(".card")
 let currCard=0;
 let maxCardNum=cards.length
+let dots=document.querySelectorAll(".dot")
+let dotsDiv=document.querySelector(".dots")
 //this one if for the header
 let observer = new IntersectionObserver(
     function (entries) {
@@ -105,6 +107,30 @@ const hideForm=function(e){
    
 }
 
+const goRight=function(){
+    if(currCard>=maxCardNum-1)
+        {
+            currCard=0
+        }
+        else{
+        currCard++
+        }
+        cards[currCard].classList.toggle("next-animation")
+        setTimeout(function(){cards[currCard].classList.toggle("next-animation")},2000)
+        goToCard(currCard)
+}
+const goLeft=function(){
+    if(currCard===0)
+        {
+            currCard=maxCardNum-1
+        }
+        else{
+            currCard--
+        }
+        cards[currCard].classList.toggle("previous-animation")
+        setTimeout(function(){cards[currCard].classList.toggle("previous-animation")},2000)
+        goToCard(currCard)
+}
 formShowBtn.addEventListener("click",function(e){
     showForm(e)
 })
@@ -177,8 +203,11 @@ nav.addEventListener("mouseover",function(e){
 const goToCard=function(cardNum){
     cards.forEach(function(card,i){
         card.style.transform=`translateX(${(i-cardNum)*100}%)`
+        if(card.style.transform==="translateX(0px)"){
+            
+            dot[i].classList.toggle("active-dot")
+        }
     })
-
 }
 goToCard(0)
 nav.addEventListener("mouseout",function(e){
@@ -195,30 +224,23 @@ nav.addEventListener("mouseout",function(e){
         }
     }
 })
-rightBtn.addEventListener("click",function(){
+rightBtn.addEventListener("click",goRight)
 
-    if(currCard>=maxCardNum-1)
-    {
-        currCard=0
-    }
-    else{
-    currCard++
-    }
-    cards[currCard].classList.toggle("next-animation")
-    setTimeout(function(){cards[currCard].classList.toggle("next-animation")},2000)
-    goToCard(currCard)
-})
+leftBtn.addEventListener("click",goLeft)
 
-leftBtn.addEventListener("click",function(){
-    
-    if(currCard===0)
-    {
-        currCard=maxCardNum-1
+dotsDiv.addEventListener("click",function(e){
+    if(e.target.classList.contains("dot")){
+        let card=e.target.dataset.card
+        
+        dots[card].classList.toggle("active-dot")
+        dots[currCard].classList.toggle("active-dot")
+        if(card>currCard){
+            goToCard(card)
+            currCard=card
+        }
+        else{
+        goToCard(card)
+        currCard=card
+        }
     }
-    else{
-        currCard--
-    }
-    cards[currCard].classList.toggle("previous-animation")
-    setTimeout(function(){cards[currCard].classList.toggle("previous-animation")},2000)
-    goToCard(currCard)
 })
