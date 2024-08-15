@@ -116,6 +116,9 @@ const goRight=function(){
         currCard++
         }
         cards[currCard].classList.toggle("next-animation")
+        
+        dots[currCard-1]?.classList.toggle("active-dot")
+        dots[currCard]?.classList.toggle("active-dot")
         setTimeout(function(){cards[currCard].classList.toggle("next-animation")},2000)
         goToCard(currCard)
 }
@@ -128,6 +131,9 @@ const goLeft=function(){
             currCard--
         }
         cards[currCard].classList.toggle("previous-animation")
+        dots[currCard+1]?.classList.toggle("active-dot")
+        dots[currCard]?.classList.toggle("active-dot")
+        
         setTimeout(function(){cards[currCard].classList.toggle("previous-animation")},2000)
         goToCard(currCard)
 }
@@ -231,7 +237,8 @@ leftBtn.addEventListener("click",goLeft)
 dotsDiv.addEventListener("click",function(e){
     if(e.target.classList.contains("dot")){
         let card=e.target.dataset.card
-        
+        console.log("To",dots[card])
+        console.log("currCard",dots[currCard])
         dots[card].classList.toggle("active-dot")
         dots[currCard].classList.toggle("active-dot")
         if(card>currCard){
