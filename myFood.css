@@ -12,13 +12,13 @@ body {
   color: #ced4da;
   position: relative;
 }
-.sticky{
+.sticky {
   position: fixed;
   background-color: rgba(52, 58, 64, 0.4);
   transition: 0.5s;
   z-index: 1000;
 }
-nav{
+nav {
   width: 100%;
   top: 0;
   display: flex;
@@ -27,25 +27,25 @@ nav{
   background-color: rgba(52, 58, 64, 0.4);
   font-size: 24px;
 }
-nav span{
+nav span {
   padding: 0;
 }
-nav a:visited,nav a:link,nav a:active{
+nav a:visited,
+nav a:link,
+nav a:active {
   text-decoration: none;
   font-weight: bold;
-  color: #ced4da ;
+  color: #ced4da;
 }
 
-nav a:hover{
+nav a:hover {
   text-decoration: underline;
 }
 
-
-.subscribe{
+.subscribe {
   border-radius: 15px;
   background-color: #e67e22;
   padding: 10px;
-  
 }
 .logo {
   width: 70px;
@@ -111,8 +111,8 @@ h1 {
   font-size: 42px;
   color: #e67e22;
 }
-.sample-header{
-    text-align: center;
+.sample-header {
+  text-align: center;
 }
 header span {
   align-self: center;
@@ -154,7 +154,6 @@ h2 {
   /* justify-content: center; */
   flex-direction: column;
   /* width: 100%; */
-
 }
 .header-number {
   font-size: 70px;
@@ -174,42 +173,43 @@ h2 {
   font-weight: bold;
   margin-top: 150px;
 }
-.how-description-1{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    /* margin-right: 300px; */
-    /* width: 50%; */
-    margin-right: 100px;
+.how-description-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  /* margin-right: 300px; */
+  /* width: 50%; */
+  margin-right: 100px;
 }
 
-section,.gallery-and-reviews-div,footer{
+section,
+.gallery-and-reviews-div,
+footer {
   opacity: 1;
   transform: translateY(10px);
   transition: all 0.5s;
 }
-section div div p{
-    width: 75%;
+section div div p {
+  width: 75%;
 }
 
-.blured{
+.blured {
   filter: blur(20px);
   transition: 0.5s;
 }
 
 .first-how {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
-.first-how-img{
-    align-self: center;
-    margin-left: 200px;
-    position: relative;
-    /* width: 360px; */
-    
+.first-how-img {
+  align-self: center;
+  margin-left: 200px;
+  position: relative;
+  /* width: 360px; */
 }
 /* .first-how::after{
     width: 60%;
@@ -220,33 +220,33 @@ section div div p{
   z-index: -2;
 } */
 
-.how-description-2{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
+.how-description-2 {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
 }
 .second-how {
-    display: flex;
-    align-self: flex-end;
+  display: flex;
+  align-self: flex-end;
 }
-.second-how-img{
-    margin-right: 200px;
+.second-how-img {
+  margin-right: 200px;
 }
 
-.how-description-3{
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
+.how-description-3 {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
 }
-.third-how{
-    display: flex;
+.third-how {
+  display: flex;
 }
-.third-how-img{
-    margin-left: 200px;
+.third-how-img {
+  margin-left: 200px;
 }
 .any-diet-header {
   text-align: center;
@@ -254,14 +254,14 @@ section div div p{
   font-size: 28px;
   margin: 0;
 }
-.diets{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 100px;
+.diets {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
 }
 
-.diets div{
+.diets div {
   display: flex;
   gap: 150px;
   font-size: 28px;
@@ -269,125 +269,121 @@ section div div p{
   width: 100%;
   justify-content: center;
 }
-.dites-list-1 ,.dites-list-2 ,.dites-list-3{
+.dites-list-1,
+.dites-list-2,
+.dites-list-3 {
   list-style: none;
 }
- /* .dites-list-1 li ,.dites-list-2 li ,.dites-list-3 li{
+/* .dites-list-1 li ,.dites-list-2 li ,.dites-list-3 li{
   padding-top:15px;;
   padding-bottom:15px;
  } */
-div h1{
-    text-align: center;
+div h1 {
+  text-align: center;
 }
-.sample{
+.sample {
   margin-top: 50px;
-    display: grid;
-    font-size: 24px;
-    grid-template-columns: 600px 600px;
-    justify-items: center;
-    column-gap: 10px;
-    margin-left: 250px;
-    color: #ced4da;
+  display: grid;
+  font-size: 24px;
+  grid-template-columns: 600px 600px;
+  justify-items: center;
+  column-gap: 10px;
+  margin-left: 250px;
+  color: #ced4da;
 }
 
-.sample-header{
+.sample-header {
   margin-top: 90px;
 }
 
-.sample div img{
-    width: 100%;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
+.sample div img {
+  width: 100%;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
 }
-.sample div{
-    box-shadow: 0px 13px 100px black;
-    border-radius: 15px;
-    background-color: #343a40;
-    margin-left: 50px;
-    transition: 0.5s;
+.sample div {
+  box-shadow: 0px 13px 100px black;
+  border-radius: 15px;
+  background-color: #343a40;
+  margin-left: 50px;
+  transition: 0.5s;
 }
 
-.sample div:hover{
+.sample div:hover {
   transform: translateY(-10px);
 }
-.sample section{
+.sample section {
   justify-items: start;
 }
-section span blockquote{
-    color: #e67e22;
-    font-size: 42px;
-    font-weight: bold;
+section span blockquote {
+  color: #e67e22;
+  font-size: 42px;
+  font-weight: bold;
 }
 .food-name {
   background-color: #e67e22;
 }
-.jp-food,.salad{
+.jp-food,
+.salad {
   background-color: #e67e22;
   border-radius: 15px;
   padding: 5px;
 }
-.icon{
+.icon {
   fill: #e67e22;
   margin-right: 10px;
 }
-.icon-2{
+.icon-2 {
   fill: #ced4da;
   margin-right: 10px;
-
 }
-.more-recipes{
+.more-recipes {
   color: #e67e22;
   font-size: 24px;
   margin-top: 100px;
   display: flex;
   align-items: center;
   justify-content: center;
-  
-
 }
-.more-recipes a:link,.more-recipes a:visited {
+.more-recipes a:link,
+.more-recipes a:visited {
   color: #e67e22;
 }
 
-
-
-
-.meal-list{
-    margin-left: 40px;
-    list-style: none;
+.meal-list {
+  margin-left: 40px;
+  list-style: none;
 }
 
-h1{
+h1 {
   text-align: center;
   margin: 50px 0;
   font-size: 42px;
 }
-.pricing-plans{
+.pricing-plans {
   font-size: 24px;
   display: flex;
   gap: 150px;
   justify-content: center;
-
 }
-.price-card{
+.price-card {
   width: 480px;
 }
-.price-card-1{
+.price-card-1 {
   padding: 50px 0;
-  box-shadow: 2px 2px 50px black ;
+  box-shadow: 2px 2px 50px black;
   border-radius: 15px;
   background-color: #343a40;
   font-weight: bold;
 }
 
-.price-card-2{
+.price-card-2 {
   background-color: #ff922b;
   padding: 50px 0;
   box-shadow: 2px 2px 25px #ffa94d;
   border-radius: 15px;
   color: #343a40;
   font-weight: bold;
-  
 }
 .price-card p {
   font-weight: bold;
@@ -396,64 +392,61 @@ h1{
   align-items: center;
   margin: 25px 0;
 }
-.price-card ul{
+.price-card ul {
   list-style: none;
 }
-.price-card ul li{
+.price-card ul li {
   margin: 25px 0;
   padding-left: 40px;
 }
 
-.price-card p  {
- /* color: #e67e22; */
- display: inline;
+.price-card p {
+  /* color: #e67e22; */
+  display: inline;
 }
-.price-card{
+.price-card {
   display: flex;
   flex-direction: column;
 }
-.price-1::after{
+.price-1::after {
   content: "per month";
-  color:#ced4da ;
+  color: #ced4da;
   display: inline;
 }
 
-.bundle-header-1,.bundle-header-2{
+.bundle-header-1,
+.bundle-header-2 {
   text-align: center;
-  
 }
-.price-2{
+.price-2 {
   color: #343a40;
   font-weight: bold;
 }
-.price-2::after{
+.price-2::after {
   content: "per month";
   color: #343a40;
-
 }
-.btn{
-
+.btn {
   width: 180px;
   margin-left: 140px;
   font-size: 22px;
   border-radius: 15px;
   transition: 0.5s;
 }
-.first-btn{
+.first-btn {
   background-color: #ced4da;
   color: #343a40;
   border: none;
   box-shadow: 2px 2px 15px #ced4da;
   font-weight: bold;
   padding: 2px;
-  
 }
-.first-btn:hover{
-  background-color: #f1f3f5 ;
+.first-btn:hover {
+  background-color: #f1f3f5;
   cursor: pointer;
 }
-.second-btn{
-  background-color:  #fcc419;
+.second-btn {
+  background-color: #fcc419;
   border: none;
   box-shadow: 2px 2px 30px #343a40;
   color: #343a40;
@@ -462,47 +455,47 @@ h1{
   transition: 0.5s;
 }
 
-.second-btn:hover{
+.second-btn:hover {
   background-color: #ffbf00;
   box-shadow: 2px 2px 30px #212529;
 }
-.gallery{
+.gallery {
   /* margin-top: 150px; */
   display: grid;
   grid-template-columns: 150px 150px 150px 150px;
-  grid-template-rows: 150px 150px 150px ;
+  grid-template-rows: 150px 150px 150px;
   row-gap: 10px;
   column-gap: 10px;
   margin-right: 50px;
 }
-.gallery img{
+.gallery img {
   width: 150px;
   transition: 500ms;
 }
 
-.gallery img:hover{
+.gallery img:hover {
   width: 180px;
   transform: scale(1.1);
 }
-.gallery-div{
+.gallery-div {
   display: flex;
   justify-content: flex-end;
 }
 
-.gallery-and-reviews-div{
+.gallery-and-reviews-div {
   display: flex;
   align-items: center;
   margin-top: 150px;
 }
-.customer-review div img{
+.customer-review div img {
   width: 50px;
   align-self: flex-start;
   border-radius: 100px;
 }
-.review{
+.review {
   width: 75%;
 }
-.customer-review div{
+.customer-review div {
   /* border: 2px solid #e67e22; */
   box-shadow: 2px 2px 25px #495057;
   background-color: #495057;
@@ -515,7 +508,7 @@ h1{
   gap: 20px;
 }
 
-.carousel{
+.carousel {
   position: relative;
   display: flex;
   /* flex-direction: column; */
@@ -540,9 +533,9 @@ h1{
 .carousel-card-3{
   transform: translateX(200%);
 } */
-.card{
+.card {
   position: absolute;
-  background-color: #ffa94d ;
+  background-color: #ffa94d;
   display: flex;
 }
 .right-btn {
@@ -587,7 +580,6 @@ h1{
   height: 100px;
   margin-left: 50px;
   padding: 48px;
-
 }
 .name {
   padding-top: 100px;
@@ -609,7 +601,7 @@ h1{
 
 .carousel-img-1,
 .carousel-img-2,
-.carousel-img-3{
+.carousel-img-3 {
   width: 150px;
   height: 150px;
   align-self: center;
@@ -623,11 +615,9 @@ h1{
   right: 70%;
   display: flex;
 }
-.dot{
+.dot {
   transition: 0.5s;
-
 }
-
 
 .dot-1 {
   position: absolute;
@@ -639,7 +629,6 @@ h1{
   height: 20px;
   left: -20px;
   cursor: pointer;
-
 }
 .dot-2 {
   border-radius: 100px;
@@ -650,7 +639,6 @@ h1{
   height: 20px;
   left: -25px;
   cursor: pointer;
-
 }
 .dot-3 {
   border-radius: 100px;
@@ -661,7 +649,6 @@ h1{
   height: 20px;
   left: 0;
   cursor: pointer;
-
 }
 .active-dot {
   background-color: #e8590c;
@@ -674,11 +661,11 @@ h1{
   animation-fill-mode: forwards;
 }
 @keyframes nextAnimation {
-  from{
+  from {
     transform: translateX(100px);
     opacity: 0;
   }
-  to{
+  to {
     transform: translateX(0);
     opacity: 1;
   }
@@ -692,34 +679,33 @@ h1{
 }
 
 @keyframes previousAnimation {
-    from{
-      transform: translateX(-100px);
-      opacity: 0;
-    }
-    to{
-      transform: translateX(0);
-      opacity: 1;
-    }
-  
-} 
-footer{
+  from {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+footer {
   background-color: #343a40;
   border-top: 5px solid #343a40;
-  margin-top: 150px ;
+  margin-top: 150px;
 }
-.logos{
+.logos {
   display: flex;
   margin: 0 0 150px 30px;
   justify-content: space-around;
   gap: 40px;
 }
 
-.logos img{
+.logos img {
   width: 200px;
   filter: brightness(0);
 }
 
-.behind-form{
+.behind-form {
   display: none;
   top: 0;
   left: 0;
@@ -731,33 +717,31 @@ footer{
   z-index: 5;
 }
 
-.hide{
+.hide {
   opacity: 0;
-  pointer-events:none;
+  pointer-events: none;
   transition: 0.5s;
 }
 
-.unhide{
+.unhide {
   opacity: 1;
   pointer-events: auto;
   transition: 0.5s;
 }
 
-
-
-.unfaded{
+.unfaded {
   opacity: 1;
   transition: 0.5s;
 }
-.link{
+.link {
   opacity: 1;
 }
-.fade{
+.fade {
   color: #868e96;
   opacity: 0.5;
   transition: 0.5s;
 }
-form{
+form {
   margin: 150px 100px;
   font-size: 24px;
   position: absolute;
@@ -775,85 +759,86 @@ form{
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  
 }
-.form form p, .form form input{
+.form form p,
+.form form input {
   align-self: flex-start;
-  
 }
-form input{
+form input {
   margin: 30px auto;
   border-radius: 15px;
   height: 50px;
   width: 300px;
 }
 
-.submit{
+.submit {
   border-radius: 15px;
   font-size: 24px;
   height: 50px;
   width: 300px;
   background-color: #e67e22;
   color: #212529;
-  font-weight:bold
+  font-weight: bold;
 }
-select{
+select {
   border-radius: 15px;
   font-size: 24px;
   font-weight: bold;
   height: 50px;
   width: 300px;
   color: #868e96;
-
 }
-.inputs{
+.inputs {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
   row-gap: 30px;
   column-gap: 30px;
 }
-::placeholder{
+::placeholder {
   padding-left: 20px;
   font-size: 24px;
   font-weight: bold;
 }
-.form img{
+.form img {
   position: absolute;
   right: 0;
   border-radius: 15px;
-  transform:scale(1.5);
+  transform: scale(1.5);
   box-shadow: 2px 2px 25px #212529;
 }
 form p {
   margin-left: 10px;
 }
 
-form h3{
+form h3 {
   font-size: 42px;
 }
-.contact p {}
-.contact{
+.contact p {
+}
+.contact {
   margin-left: 50px;
-color: #868e96;
+  color: #868e96;
   /* width: 50%; */
   font-size: 20px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr
+  grid-template-columns: 1fr 1fr 1fr 1fr;
 }
-.contact a:link, .contact a:visited , .contact a:active{
+.contact a:link,
+.contact a:visited,
+.contact a:active {
   text-decoration: none;
   color: #e67e22;
   transition: 0.5s;
-
 }
 
-.contact a:link:hover, .contact a:visited:hover , .contact a:active:hover{
-
+.contact a:link:hover,
+.contact a:visited:hover,
+.contact a:active:hover {
   color: #e8590c;
 }
 
-.more-info{
+.more-info {
   margin-left: 50px;
   margin-top: 50px;
   font-size: 20px;
@@ -862,26 +847,28 @@ color: #868e96;
   grid-template-columns: 1fr 1fr 1fr 1fr;
 }
 
-.more-info div{
+.more-info div {
   display: flex;
   flex-direction: column;
 }
-.more-info div a:link,.more-info div a:visited,.more-info div a:active{
+.more-info div a:link,
+.more-info div a:visited,
+.more-info div a:active {
   color: #868e96;
 }
 
-.featured-in{
-  color:#e67e22;
+.featured-in {
+  color: #e67e22;
   font-weight: bold;
   font-size: 32px;
   text-align: center;
 }
 
-.form-show-btn{
-  cursor:pointer
+.form-show-btn {
+  cursor: pointer;
 }
 
-.scroll-hide{
+.scroll-hide {
   opacity: 0;
   transform: translateY(10px);
   transition: all 500ms;
