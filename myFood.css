@@ -63,8 +63,7 @@ header {
   /* align-items: center; */
   height: 100vh;
   color: #ced4da;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), #495057),
-    url("img/hero-3.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), #495057), url("img/hero-3.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -209,16 +208,7 @@ section div div p {
   align-self: center;
   margin-left: 200px;
   position: relative;
-  /* width: 360px; */
 }
-/* .first-how::after{
-    width: 60%;
-    position: absolute;
-  padding-bottom: 60%;
-
-  background-color:white;
-  z-index: -2;
-} */
 
 .how-description-2 {
   display: flex;
@@ -288,7 +278,6 @@ div h1 {
   grid-template-columns: 600px 600px;
   justify-items: center;
   column-gap: 10px;
-  margin-left: 250px;
   color: #ced4da;
 }
 
@@ -575,11 +564,11 @@ h1 {
   fill: #e8590c;
 }
 .customer-opinion {
-  font-size: 22px;
+  font-size: 18px;
   color: #ffe8cc;
   height: 100px;
   margin-left: 50px;
-  padding: 48px;
+  padding: 48px 0;
 }
 .name {
   padding-top: 100px;
@@ -616,6 +605,8 @@ h1 {
   display: flex;
 }
 .dot {
+  pointer-events: none;
+  cursor: default;
   transition: 0.5s;
 }
 
