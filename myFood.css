@@ -68,43 +68,34 @@ header {
   background-size: cover;
 }
 
-/* header {
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.5), #495057),
-    url("img/hero-3.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-} */
+.hero-main-text {
+  width: 35rem;
+  height: fit-content;
+}
 img {
   width: 240px;
   transition: 0.5s;
 }
-.img-1 {
+.img {
   position: absolute;
+  border-radius: 15px;
+}
+.img-1 {
   right: 70px;
   top: 350px;
   z-index: 3;
-  width: 300px;
-  border-radius: 15px;
 }
 
 .img-2 {
-  position: absolute;
   right: 380px;
   top: 300px;
   z-index: 2;
-  border-radius: 15px;
 }
 
 .img-3 {
-  position: absolute;
   right: 240px;
   top: 200px;
   z-index: 1;
-  border-radius: 15px;
 }
 h1 {
   font-size: 42px;
